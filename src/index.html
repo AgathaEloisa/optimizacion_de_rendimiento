@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de Recursos en Aplicaciones Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos CSS personalizados -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- D3.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <!-- Math.js para cálculos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.10.0/math.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Optimización de Recursos en Aplicaciones Web</h1>
+
+        <!-- Sección de Optimización -->
+        <div class="section-title mt-4">
+            <h2>Comparativa de Rendimiento</h2>
+            <p>Comparación entre el tiempo de respuesta de una aplicación web antes y después de aplicar técnicas de optimización usando cálculo diferencial.</p>
+        </div>
+
+        <!-- Botón para cargar datos -->
+        <div class="text-center mb-4">
+            <button class="btn btn-primary" onclick="loadChampions()">Cargar Personajes</button>
+        </div>
+
+        <!-- Sección para mostrar los personajes -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Personajes de League of Legends</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Sin Optimización</h6>
+                        <div id="championGridWithout" class="row"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Con Optimización</h6>
+                        <div id="championGridWith" class="row"></div>
+                    </div>
+                </div>
+                <p id="loadingMessage" class="text-muted mt-3">Haz clic en el botón para cargar los personajes.</p>
+                <p id="counter" class="text-muted mt-3">Número de imágenes cargadas: 0</p>
+            </div>
+        </div>
+
+        <!-- Gráfico Comparativo de Rendimiento -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Comparación de Tiempos de Respuesta</h5>
+                <div id="responseChart" class="chart-container"></div>
+                <p id="descriptionResponseChart" class="text-muted mt-3"></p>
+            </div>
+        </div>
+
+        <!-- Gráfico de Rendimiento de CPU -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Rendimiento de CPU</h5>
+                <div id="cpuChart" class="chart-container"></div>
+                <p id="descriptionCpuChart" class="text-muted mt-3"></p>
+            </div>
+        </div>
+
+        <!-- Gráfico de Uso de Memoria -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Uso de Memoria</h5>
+                <div id="memoryChart" class="chart-container"></div>
+                <p id="descriptionMemoryChart" class="text-muted mt-3"></p>
+            </div>
+        </div>
+
+        <!-- Contenido del Modal para la Optimización del Rendimiento -->
+        <div class="modal fade" id="performanceModal" tabindex="-1" role="dialog" aria-labelledby="performanceModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="performanceModalLabel">Optimización del Rendimiento</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Comparación de Rendimiento:</h5>
+                        <p>Este gráfico muestra el impacto de la optimización en el rendimiento de una aplicación web conectada a una API.</p>
+                        <p>La optimización mejora la eficiencia en la carga de datos y el tiempo de respuesta de la aplicación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Algoritmo Matemático para Optimización -->
+        <div class="section-title mt-4">
+            <h2>Algoritmo Matemático para Optimización</h2>
+            <p>Para optimizar el rendimiento de una aplicación web, utilizamos conceptos de cálculo diferencial. En particular, aplicamos el <strong>Método del Gradiente Descendente</strong>.</p>
+            <p>Este método se basa en la función de costo \( f(x) \) que queremos minimizar, donde \( x \) representa los parámetros de nuestra función. El cálculo diferencial nos permite encontrar el mínimo de esta función ajustando iterativamente los parámetros para reducir el valor de \( f(x) \).</p>
+            <pre><code>1. Definimos una función de costo basada en el tiempo de respuesta de la aplicación.
+2. Calculamos la derivada de la función para determinar la dirección en la que debemos ajustar nuestros parámetros.
+3. Aplicamos un paso de ajuste en la dirección opuesta al gradiente para reducir el tiempo de respuesta.</code></pre>
+            <p>En este caso, la optimización se visualiza en los gráficos de rendimiento, mostrando cómo las técnicas aplicadas reducen el tiempo de respuesta de la aplicación web.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="script.js"></script>
+</body>
+</html>

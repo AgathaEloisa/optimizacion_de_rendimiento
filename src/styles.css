@@ -1,0 +1,41 @@
+/* Estilos personalizados */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h5 {
+    color: #343a40;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    height: 300px;
+}
+
+#championGridWithout, #championGridWith {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#championGridWithout img, #championGridWith img {
+    width: 60px;
+    height: 60px;
+}
+
+.bar {
+    fill: #007bff;
+}
+
+.x-axis path, .x-axis line, .y-axis path, .y-axis line {
+    shape-rendering: crispEdges;
+}
+
+.x-axis text, .y-axis text {
+    font-size: 12px;
+}
